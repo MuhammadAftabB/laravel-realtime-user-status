@@ -1,4 +1,4 @@
-namespace MuhammadAftab\RealTimeUserStatus;
+namespace MuhammadAftab\RealTimeUserStatus\src;
 
 use Illuminate\Support\ServiceProvider;
 
