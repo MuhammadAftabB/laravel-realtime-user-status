@@ -1,3 +1,5 @@
+<?php
+
 namespace MuhammadAftab\RealTimeUserStatus\Http\Middleware;
 
 use Closure;

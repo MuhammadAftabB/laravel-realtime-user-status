@@ -1,3 +1,5 @@
+<?php
+
 namespace MuhammadAftab\RealTimeUserStatus\Http\Middleware;
 
 use Closure;
@@ -7,16 +9,16 @@ use MuhammadAftab\RealTimeUserStatus\Models\UserActivityLog;
 
 class LogUserActivity
 {
-public function handle(Request $request, Closure $next)
-{
-if (Auth::check()) {
-$user = Auth::user();
-UserActivityLog::create([
-'user_id' => $user->id,
-'activity' => 'Visited ' . $request->path()
-]);
-}
+    public function handle(Request $request, Closure $next)
+    {
+        if (Auth::check()) {
+            $user = Auth::user();
+            UserActivityLog::create([
+                'user_id' => $user->id,
+                'activity' => 'Visited ' . $request->path()
+            ]);
+        }
 
-return $next($request);
-}
+        return $next($request);
+    }
 }
