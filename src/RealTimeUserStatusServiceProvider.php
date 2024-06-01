@@ -10,7 +10,7 @@ class RealTimeUserStatusServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/realtime-user-status.php', 'realtime-user-status');
 
-        // Load helpers
+        // Load helpers done
         require_once __DIR__ . '/Helpers/RealTimeUserStatusHelper.php';
     }
 
